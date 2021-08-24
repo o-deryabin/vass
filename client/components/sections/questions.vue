@@ -1,0 +1,110 @@
+<template>
+  <section class="section section--questions">
+    <v-container>
+      <h2 class="sub-title">Частые вопросы</h2>
+
+      <v-row class="">
+        <v-col md="8" class="ml-auto section__content">
+          <v-expansion-panels>
+            <v-expansion-panel v-for="(item, index) in questions" :key="index">
+              <v-expansion-panel-header
+                class="section__title section__title--26"
+              >
+                {{ item.title }}
+              </v-expansion-panel-header>
+              <v-expansion-panel-content
+                class="section__description section__description--16"
+              >
+                {{ item.description }}
+              </v-expansion-panel-content>
+            </v-expansion-panel>
+          </v-expansion-panels>
+        </v-col>
+      </v-row>
+    </v-container>
+  </section>
+</template>
+
+<script>
+export default {
+  data: () => ({
+    questions: [
+      {
+        title: "Сколько можно сделать страниц на сайте?",
+        description: "До 500 страниц.",
+      },
+      {
+        title: "Какую информацию необходимо предоставить в начале разработки?",
+        description:
+          "В начале разработки необходимо предоставить название вашей компании, и то какая цель стоит перед сайтом. (Например: повысить продажи, сделать бренд узнаваемым).",
+      },
+      {
+        title: "Используете ли Вы готовые шаблоны при разработки сайта?",
+        description:
+          "Нет, мы не используем готовые шаблоны, мы делаем уникальный дизайн для каждого клиента. Это философия нашей команды. Мы стараемся показать в каждом сайте индивидуальность и особенности бренда.",
+      },
+      {
+        title: "Работаете ли Вы по договору?",
+        description:
+          "Да, у нас ИП и со всеми клиентами мы заключаем договор. Мы принимаем оплату безналичным расчетом.",
+      },
+      {
+        title: "Сколько лет Вы на рынке?",
+        description: "Мы на рынке с 2017 года.",
+      },
+    ],
+  }),
+};
+</script>
+
+<style lang="scss" scoped>
+// .v-expansion-panel-header {
+//   font-family: Inter;
+//   font-style: normal;
+//   font-weight: 600;
+//   font-size: 26px;
+//   line-height: 130%;
+//   color: #000000;
+//   padding-top: 50px;
+//   padding-bottom: 50px;
+
+//   font-size: 18px;
+// line-height: 130%;
+// letter-spacing: 0.07em;
+// }
+
+// .v-expansion-panel-content {
+//   font-size: 18px;
+//   color: $c-grey;
+// }
+
+.v-expansion-panel {
+  background-color: #f8f8f8;
+}
+
+.section {
+  &__content {
+    margin-top: 35px;
+  }
+
+  &__title {
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 130%;
+    color: #000000;
+
+    @media (min-width: 960px) {
+      padding-top: 50px;
+      padding-bottom: 50px;
+      font-size: 26px;
+    }
+    @media (max-width: 960px) {
+      letter-spacing: 0.07em;
+    }
+  }
+  &__description {
+    @media (min-width: 960px) {
+    }
+  }
+}
+</style>

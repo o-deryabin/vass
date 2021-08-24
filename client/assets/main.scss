@@ -1,0 +1,99 @@
+body {
+  font-family: Inter;
+}
+
+.theme--light.v-application {
+  background-color: #f8f8f8 !important;
+}
+
+.sub-title {
+  font-family: Inter;
+  font-weight: 400;
+  text-transform: uppercase;
+  color: $c-orange;
+  font-size: 28px;
+  line-height: 130%;
+  @media (min-width: 960px) {
+    font-size: 87px;
+    line-height: 130%;
+  }
+}
+
+.section {
+  padding: 15px 0;
+  @media (min-width: 960px) {
+    padding: 85px 0;
+  }
+  &__divider {
+    margin-top: 30px;
+    margin-bottom: 30px;
+    border-top-color: #aeaeae;
+    @media (min-width: 960px) {
+      margin-top: 85px;
+      margin-bottom: 50px;
+    }
+  }
+  &__title {
+    font-family: Inter;
+    &--26 {
+      font-weight: 600;
+      font-size: 18px;
+      line-height: 130%;
+      color: #000000;
+      @media (min-width: 960px) {
+        font-size: 26px;
+      }
+    }
+    &--18-black {
+      font-weight: 600;
+      font-size: 16px;
+      line-height: 130%;
+      color: #000000;
+      @media (min-width: 960px) {
+        font-size: 18px;
+      }
+    }
+    &--18-grey {
+      font-weight: 600;
+      font-size: 18px;
+      line-height: 130%;
+      color: $c-grey;
+    }
+  }
+  &__description {
+    font-family: Inter;
+    &--18 {
+      font-size: 15px;
+      line-height: 130%;
+      color: $c-grey;
+      @media (min-width: 960px) {
+        font-size: 18px;
+      }
+    }
+    &--16 {
+      font-size: 14px;
+      line-height: 120%;
+      color: $c-grey;
+      @media (min-width: 960px) {
+        font-size: 16px;
+      }
+    }
+  }
+  &__btn {
+    font-family: Inter;
+    line-height: 130%;
+    font-size: 14px;
+    background: $c-orange;
+    color: #ffffff;
+    transition: 0.3s;
+    padding: 25px 50px;
+    text-transform: uppercase;
+    @media (min-width: 960px) {
+      font-size: 18px;
+    }
+
+    &:hover {
+      background: #000000;
+    }
+  }
+}
