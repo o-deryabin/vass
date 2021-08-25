@@ -3,7 +3,9 @@
     <v-container>
       <v-row>
         <v-col md="6" cols="12">
-          <h2 class="sub-title">Оставить заявку</h2>
+          <h2 class="sub-title animate__animated animate__fadeInUp">
+            Оставить заявку
+          </h2>
         </v-col>
         <v-col md="6" cols="12" class="section__right">
           <p class="section__description section__description--18">

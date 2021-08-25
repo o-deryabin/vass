@@ -1,7 +1,9 @@
 <template>
   <section class="section section--projects">
     <v-container>
-      <h2 class="sub-title">Создавали проекты для компаний</h2>
+      <h2 class="sub-title animate__animated animate__fadeInUp">
+        Создавали проекты для компаний
+      </h2>
 
       <v-row class="section__content">
         <v-col md="8" class="ml-auto">

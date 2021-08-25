@@ -1,7 +1,9 @@
 <template>
   <section class="section section--team">
     <v-container>
-      <h2 class="sub-title">Время – деньги!</h2>
+      <h2 class="sub-title animate__animated animate__fadeInUp">
+        Время – деньги!
+      </h2>
 
       <v-row>
         <v-col md="8" class="ml-auto">
@@ -16,10 +18,7 @@
               <h4 class="section__title section__title--first">
                 Станислав Васильев
               </h4>
-              <h6 class="section__description">
-                Основатель<br />
-                веб студии
-              </h6>
+              <h6 class="section__description mt-3">Основатель веб студии</h6>
               <v-row class="section__about">
                 <v-col cols="6">
                   <h4 class="section__title section__title--second">5</h4>
@@ -31,17 +30,13 @@
                   cols="6"
                   class="d-md-flex flex-md-column justify-md-end align-md-end"
                 >
-                  <nuxt-img
-                    format="webp"
-                    quality="80"
-                    src="/img/team/image 17_2.png"
+                  <img
+                    src="/img/team/image 17_2.webp"
                     alt="AmoCrm партнер"
                     class="section__img--partners"
                   />
-                  <nuxt-img
-                    format="webp"
-                    quality="80"
-                    src="/img/team/image 18_2.png"
+                  <img
+                    src="/img/team/image 18_2.webp"
                     alt="Google партнер"
                     class="section__img--partners mt-5"
                   />
@@ -49,13 +44,7 @@
               </v-row>
             </v-col>
             <v-col cols="5">
-              <nuxt-img
-                format="webp"
-                quality="80"
-                src="/img/team/Ellipse 5.png"
-                alt=""
-                class="section__img"
-              />
+              <img src="/img/team/Ellipse 5.webp" alt="" class="section__img" />
             </v-col>
           </v-row>
         </v-col>

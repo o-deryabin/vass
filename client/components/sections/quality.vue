@@ -1,7 +1,9 @@
 <template>
   <section class="section section--quality">
     <v-container>
-      <h2 class="sub-title">ВЫСОКОЕ КАЧЕСТВО САЙТОВ</h2>
+      <h2 class="sub-title animate__animated animate__fadeInUp">
+        ВЫСОКОЕ КАЧЕСТВО САЙТОВ
+      </h2>
 
       <v-row
         v-for="(item, index) in data"

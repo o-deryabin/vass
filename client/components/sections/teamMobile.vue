@@ -1,7 +1,9 @@
 <template>
   <section class="section section--teamMobile">
     <v-container>
-      <h2 class="sub-title">Время – деньги!</h2>
+      <h2 class="sub-title wow animate__fadeInUp" data-wow-duration="1.5s">
+        Время – деньги!
+      </h2>
       <p class="section__description section__description--18 mt-4 mb-6">
         Обратившись в нашу компанию, Вам не придется его тратить. Вам не нужно
         дополнительно искать специалистов по рекламе и продвижению. Всю работу
@@ -21,26 +23,16 @@
           <p class="section__description section__description--16 mt-4">
             лет опыта в веб разработке
           </p>
-          <nuxt-img
-            format="webp"
-            quality="80"
-            src="/img/team/image 17_2.png"
+          <img
+            src="/img/team/image 17_2.webp"
             alt="AmoCrm партнер"
             class="section__img--partners mt-1"
           />
         </v-col>
         <v-col cols="6">
-          <nuxt-img
-            format="webp"
-            quality="80"
-            src="/img/team/Ellipse 5.png"
-            alt=""
-            class="section__img"
-          />
-          <nuxt-img
-            format="webp"
-            quality="80"
-            src="/img/team/image 18_2.png"
+          <img src="/img/team/Ellipse 5.webp" alt="" class="section__img" />
+          <img
+            src="/img/team/image 18_2.webp"
             alt="Google партнер"
             class="section__img--partners mt-5"
           />

@@ -11,7 +11,7 @@ router.post("/send", async (req, res) => {
 
     const message = {
       from: '"Vass.kz" <mail.vass.kz@gmail.com>', // sender address
-      to: "vassilyev.com@gmail.com", // list of receivers
+      to: "olegderyabin22@gmail.com, vassilyev.com@gmail.com", // list of receivers
       subject: "Новая заявка!!!", // Subject line
       text: `Данные человека
       

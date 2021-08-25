@@ -1,13 +1,7 @@
 <template>
   <header class="header">
     <v-container class="d-flex justify-space-between align-center">
-      <nuxt-img
-        format="webp"
-        quality="80"
-        src="/img/logo.png"
-        alt="logo"
-        class="header__logo"
-      />
+      <img src="/img/logo.webp" alt="logo" class="header__logo" />
       <nav class="header__nav">
         <a :href="item.link" v-for="(item, index) in links" :key="index">{{
           item.title

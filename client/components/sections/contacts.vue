@@ -1,7 +1,7 @@
 <template>
   <section class="section section--contacts" id="contacts">
     <v-container>
-      <h2 class="sub-title">Контакты</h2>
+      <h2 class="sub-title animate__animated animate__fadeInUp">Контакты</h2>
       <v-row class="section__content">
         <v-col md="8" class="ml-auto">
           <p class="section__text">
@@ -86,7 +86,7 @@ export default {
         return (this.snackbar = true);
       }
 
-      const response = await this.$axios.$post("/api/email/send", {
+      const response = await this.$axios.$post("/email/send", {
         ...this.form,
       });
 

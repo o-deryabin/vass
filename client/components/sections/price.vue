@@ -1,7 +1,9 @@
 <template>
   <section class="section section--price" id="price">
     <v-container>
-      <h2 class="sub-title">Цены и сроки</h2>
+      <h2 class="sub-title animate__animated animate__fadeInUp">
+        Цены и сроки
+      </h2>
       <v-divider class="section__divider"></v-divider>
 
       <v-row

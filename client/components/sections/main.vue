@@ -1,7 +1,7 @@
 <template>
   <section class="section section--main">
     <v-container>
-      <h1 class="c-title">
+      <h1 class="c-title animate__animated animate__fadeInUp">
         <template v-if="width >= 980">
           Сайты<br />
           Интернет-магазины<br />

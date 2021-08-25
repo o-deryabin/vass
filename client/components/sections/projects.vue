@@ -1,7 +1,9 @@
 <template>
   <section class="section section--projects" id="projects">
     <v-container>
-      <h2 class="sub-title">Проекты студии</h2>
+      <h2 class="sub-title animate__animated animate__fadeInUp">
+        Проекты студии
+      </h2>
       <v-divider class="section__divider"></v-divider>
 
       <v-row
@@ -38,11 +40,7 @@
           /></a>
         </v-col>
         <v-col md="8" class="section__right d-flex align-center"
-          ><nuxt-img
-            format="webp"
-            quality="80"
-            :src="'/img/projects' + item.img"
-            class="section__image"
+          ><img :src="'/img/projects' + item.img" class="section__image"
         /></v-col>
       </v-row>
     </v-container>
@@ -59,7 +57,7 @@ export default {
         title: "AsiaThaiSpa",
         text: "Первый в Казахстане SPA-бутик тайского и балийского массажа.",
         link: "https://asiathaispa.kz",
-        img: "/AsiaThaiSpa.png",
+        img: "/AsiaThaiSpa.webp",
         class: "first",
         task: {
           title: "Задача",
@@ -82,7 +80,7 @@ export default {
         title: "Metalset",
         text: "Является стратегическим партнером ведущих металлургических заводов Казахстана и России.",
         link: "https://www.metalset.kz",
-        img: "/Metalset.png",
+        img: "/Metalset.webp",
         class: "second",
         task: {
           title: "Задача",
@@ -104,7 +102,7 @@ export default {
         title: "Greenfax",
         text: "Творческая мастерская. Здесь вы можете заказать деревянные изделия и собирать их всей семьей.",
         link: "https://greenfax.kz",
-        img: "/Greenfax.png",
+        img: "/Greenfax.webp",
         class: "third text-black img-padding",
         task: {
           title: "Задача",
@@ -129,7 +127,7 @@ export default {
         title: "Cауда-24",
         text: "Интернет-магазин с максимально низкими ценами. Девиз компании: сделать покупку товаров в интернет-магазине приятным и выгодным процессом для вас.",
         link: "https://www.sauda24.kz/",
-        img: "/Cауда-24.png",
+        img: "/Cауда-24.webp",
         class: "fourth",
         task: {
           title: "Задача",
@@ -151,9 +149,9 @@ export default {
       },
       {
         title: "Sfera-Plast",
-        text: "ТОО «Сфера пласт» – это качественное производство и продажа гофрированных труб по всему Казахстану",
+        text: "ТОО «Сфера пласт» – это качественное производство и продажа гофрированных труб по всему Казахстану.",
         link: "https://sfera-plast.kz/",
-        img: "/Sfera-Plast.png",
+        img: "/Sfera-Plast.webp",
         class: "fifth text-black img-padding",
         task: {
           title: "Задача",
