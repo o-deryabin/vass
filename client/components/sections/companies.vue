@@ -113,7 +113,7 @@ export default {
   &__content {
     margin-top: 18px;
     @media (min-width: 960px) {
-      margin-top: 50px;
+      margin-top: 30px;
     }
   }
   &__right {

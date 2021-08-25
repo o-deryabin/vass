@@ -60,7 +60,7 @@ export default {};
 <style lang="scss" scoped>
 .section {
   &__content {
-    margin-top: 80px;
+    margin-top: 60px;
   }
   &__about {
     margin-top: 50px;

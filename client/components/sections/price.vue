@@ -88,8 +88,9 @@ export default {
 <style lang="scss" scoped>
 .section {
   &__content {
-    margin-top: 25px;
+    margin-top: 45px;
     border-bottom: 1px solid #aeaeae;
+
     @media (min-width: 960px) {
       margin-top: 55px;
     }
@@ -113,7 +114,7 @@ export default {
     margin-bottom: 25px;
     @media (min-width: 960px) {
       margin-top: 35px;
-      margin-bottom: 50px;
+      margin-bottom: 40px;
     }
   }
   &__btn {

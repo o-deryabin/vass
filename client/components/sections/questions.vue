@@ -68,7 +68,7 @@ export default {
 
 .section {
   &__content {
-    margin-top: 35px;
+    margin-top: 65px;
   }
 
   &__title {

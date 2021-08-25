@@ -118,7 +118,7 @@ ul {
     margin: 18px 0;
     color: $c-grey;
     @media (min-width: 960px) {
-      margin: 80px 0;
+      margin: 60px 0;
       font-size: 22px;
       letter-spacing: 0.07em;
     }

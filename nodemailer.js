@@ -2,8 +2,8 @@ const nodemailer = require("nodemailer");
 
 const transporter = nodemailer.createTransport({
   host: "smtp.gmail.com",
-  port: 587,
-  secure: false, // true for 465, false for other ports
+  port: 465,
+  secure: true, // true for 465, false for other ports
   auth: {
     user: "mail.vass.kz@gmail.com",
     pass: "KfT%6zx2W(p!7cPJbUmVY",
@@ -16,6 +16,7 @@ const mailer = (message) => {
       return console.log(err);
     }
     console.log("Email.send: ", info);
+    return { success: true };
   });
 };
 

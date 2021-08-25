@@ -20,8 +20,9 @@ export default {};
     height: 200px;
     background-image: url("/img/image/Frame 6.webp");
     background-position: center;
-    background-size: contain;
+    background-size: cover;
     @media (min-width: 600px) {
+      background-size: contain;
       background-attachment: fixed;
       height: 800px;
     }

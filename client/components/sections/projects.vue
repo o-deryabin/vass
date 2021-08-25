@@ -10,7 +10,7 @@
         v-for="(item, index) in projects"
         :key="index"
         class="section__content"
-        :class="item.class"
+        :class="[item.class, { 'mt-md-16': index === 0 }]"
       >
         <v-col md="4" class="d-flex flex-column justify-center section__left">
           <h4 class="section__title">{{ item.title }}</h4>
@@ -176,10 +176,10 @@ export default {
 
 <style lang="scss" scoped>
 $colors: (
-  "first": "#e7cf79",
+  "first": "#705E55",
   "second": "#529BC3",
   "third": "#F7F3EE",
-  "fourth": "#E71520",
+  "fourth": "#D95041",
   "fifth": "#FFFFFF",
 );
 

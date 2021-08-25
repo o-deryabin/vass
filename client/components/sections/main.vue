@@ -47,7 +47,7 @@ export default {
 .section {
   &__btn {
     color: #ffffff;
-    margin-top: 35px;
+    margin-top: 15px;
     font-size: 14px;
     line-height: 130%;
     padding: 25px 0;
@@ -77,6 +77,7 @@ export default {
   @media (min-width: 960px) {
     font-size: 82px;
     line-height: 130%;
+    margin-top: -16px;
   }
 }
 
@@ -90,7 +91,7 @@ export default {
   @media (min-width: 960px) {
     font-size: 29px;
     line-height: 120%;
-    margin: 80px 0;
+    margin: 60px 0 0;
     max-width: 400px;
   }
 }
