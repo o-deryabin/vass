@@ -60,26 +60,6 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-// .v-expansion-panel-header {
-//   font-family: Inter;
-//   font-style: normal;
-//   font-weight: 600;
-//   font-size: 26px;
-//   line-height: 130%;
-//   color: #000000;
-//   padding-top: 50px;
-//   padding-bottom: 50px;
-
-//   font-size: 18px;
-// line-height: 130%;
-// letter-spacing: 0.07em;
-// }
-
-// .v-expansion-panel-content {
-//   font-size: 18px;
-//   color: $c-grey;
-// }
-
 .v-expansion-panel {
   background-color: #f8f8f8 !important;
 }

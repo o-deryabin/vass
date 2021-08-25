@@ -1,7 +1,13 @@
 <template>
   <header class="header">
     <v-container class="d-flex justify-space-between align-center">
-      <img src="@/static/img/logo.png" alt="logo" class="header__logo" />
+      <nuxt-img
+        format="webp"
+        quality="80"
+        src="@/static/img/logo.png"
+        alt="logo"
+        class="header__logo"
+      />
 
       <div @click.stop="drawer = !drawer">
         <Header />

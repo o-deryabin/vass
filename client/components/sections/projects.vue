@@ -38,7 +38,11 @@
           /></a>
         </v-col>
         <v-col md="8" class="section__right d-flex align-center"
-          ><img :src="'/img/projects' + item.img" class="section__image"
+          ><nuxt-img
+            format="webp"
+            quality="80"
+            :src="'/img/projects' + item.img"
+            class="section__image"
         /></v-col>
       </v-row>
     </v-container>
@@ -201,6 +205,16 @@ $colors: (
   @include set-colors($class, $color);
 }
 
+.section--projects {
+  .section__right {
+    @media (min-width: 960px) {
+      margin-left: 12px;
+      flex: 0 0 calc(65.666667% - 12px);
+      max-width: calc(65.666667% - 12px);
+    }
+  }
+}
+
 .section {
   &__separator {
     margin-top: 18px;
@@ -240,6 +254,14 @@ $colors: (
     }
   }
 
+  &__right {
+    @media (min-width: 960px) {
+      margin-left: 12px;
+      flex: 0 0 calc(65.666667% - 12px);
+      max-width: calc(65.666667% - 12px);
+    }
+  }
+
   &__title {
     font-family: Inter;
     line-height: 130%;
@@ -262,8 +284,6 @@ $colors: (
     line-height: 130%;
     letter-spacing: 0.07em;
     color: $c-grey;
-    // margin-top: 35px;
-    // margin-bottom: 50px;
     @media (min-width: 960px) {
       font-size: 16px;
       font-weight: 400;

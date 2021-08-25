@@ -1,7 +1,6 @@
 <template>
   <section class="section section--image">
     <v-container>
-      <!-- <img src="/img/image/Frame 6.jpg" alt="" class="section__image" /> -->
       <div class="section__image"></div>
     </v-container>
   </section>
@@ -19,7 +18,7 @@ export default {};
   &__image {
     max-width: 100%;
     height: 200px;
-    background-image: url("/img/image/Frame 6.jpg");
+    background-image: url("/img/image/Frame 6.webp");
     background-position: center;
     background-size: contain;
     @media (min-width: 600px) {

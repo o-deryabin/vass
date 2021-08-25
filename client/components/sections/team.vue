@@ -31,12 +31,16 @@
                   cols="6"
                   class="d-md-flex flex-md-column justify-md-end align-md-end"
                 >
-                  <img
+                  <nuxt-img
+                    format="webp"
+                    quality="80"
                     src="/img/team/image 17_2.png"
                     alt="AmoCrm партнер"
                     class="section__img--partners"
                   />
-                  <img
+                  <nuxt-img
+                    format="webp"
+                    quality="80"
                     src="/img/team/image 18_2.png"
                     alt="Google партнер"
                     class="section__img--partners mt-5"
@@ -45,7 +49,13 @@
               </v-row>
             </v-col>
             <v-col cols="5">
-              <img src="/img/team/Ellipse 5.png" alt="" class="section__img" />
+              <nuxt-img
+                format="webp"
+                quality="80"
+                src="/img/team/Ellipse 5.png"
+                alt=""
+                class="section__img"
+              />
             </v-col>
           </v-row>
         </v-col>

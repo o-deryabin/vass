@@ -4,39 +4,43 @@
       <h2 class="sub-title">Создавали проекты для компаний</h2>
 
       <v-row class="section__content">
-        <v-col cols="6" class="d-md-flex justify-md-end">
-          <div>
-            <h4
-              v-for="(item, index) in firstCompanies"
-              :key="index"
-              style="margin-top: 10px"
-            >
-              <a
-                :href="item.link"
-                target="_blank"
-                rel="noopener noreferrer"
-                class="section__link"
-                >{{ item.title }}</a
-              >
-            </h4>
-          </div>
-        </v-col>
-        <v-col cols="6">
-          <div class="section__right">
-            <h4
-              v-for="(item, index) in secondCompanies"
-              :key="index"
-              style="margin-top: 10px"
-            >
-              <a
-                :href="item.link"
-                target="_blank"
-                rel="noopener noreferrer"
-                class="section__link"
-                >{{ item.title }}</a
-              >
-            </h4>
-          </div>
+        <v-col md="8" class="ml-auto">
+          <v-row>
+            <v-col cols="6" md="4">
+              <div>
+                <h4
+                  v-for="(item, index) in firstCompanies"
+                  :key="index"
+                  style="margin-top: 10px"
+                >
+                  <a
+                    :href="item.link"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="section__link"
+                    >{{ item.title }}</a
+                  >
+                </h4>
+              </div>
+            </v-col>
+            <v-col cols="6" md="8">
+              <div class="section__right">
+                <h4
+                  v-for="(item, index) in secondCompanies"
+                  :key="index"
+                  style="margin-top: 10px"
+                >
+                  <a
+                    :href="item.link"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="section__link"
+                    >{{ item.title }}</a
+                  >
+                </h4>
+              </div>
+            </v-col>
+          </v-row>
         </v-col>
       </v-row>
     </v-container>

@@ -10,6 +10,27 @@
           </h6>
         </v-col>
         <v-col md="6" cols="12">
+          <a
+            href="tel:+7(747)266-66-82"
+            class="section__link section__link--tel"
+            >+7 (747) 266-66-82</a
+          >
+          <v-row class="my-md-8 my-4">
+            <v-col md="6" cols="12">
+              <a href="mailto:hello@vass.kz" class="section__link"
+                >hello@vass.kz</a
+              >
+            </v-col>
+            <v-col md="6" cols="12">
+              <a
+                href="https://www.instagram.com/vasskz/"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="section__link"
+                >instagram</a
+              >
+            </v-col>
+          </v-row>
           <v-form ref="form" lazy-validation @submit.prevent="send">
             <v-text-field
               v-model="form.firstname"
@@ -94,6 +115,21 @@ export default {
     color: #fff;
     @media (min-width: 960px) {
       margin-top: 30px;
+    }
+  }
+  &__link {
+    font-family: Inter;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 130%;
+    letter-spacing: 0.07em;
+    color: #000000;
+    text-decoration: none;
+    &--tel {
+      @media (min-width: 960px) {
+        font-size: 29px;
+      }
     }
   }
 }

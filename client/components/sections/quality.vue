@@ -16,7 +16,11 @@
           ><p class="section__text">{{ item.text }}</p></v-col
         >
         <v-col md="4" cols="12" class="d-flex align-center"
-          ><img :src="'/img/quality' + item.img" class="section__image px-4"
+          ><nuxt-img
+            format="webp"
+            quality="80"
+            :src="'/img/quality' + item.img"
+            class="section__image px-4"
         /></v-col>
       </v-row>
     </v-container>

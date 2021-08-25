@@ -9,15 +9,12 @@
 
     <Nuxt />
 
-    <v-footer app dark :fixed="false" color="#000">
-      <v-container>
-        <span>&copy;vass.kz 2017-{{ new Date().getFullYear() }}</span>
-      </v-container>
-    </v-footer>
+    <Footer />
   </v-app>
 </template>
 
 <script>
+import Footer from "../components/common/footer.vue";
 import Header from "../components/common/header.vue";
 import HeaderMobile from "../components/common/headerMobile.vue";
 export default {
@@ -35,6 +32,6 @@ export default {
   mounted() {
     this.updateWidth();
   },
-  components: { Header, HeaderMobile },
+  components: { Header, HeaderMobile, Footer },
 };
 </script>
