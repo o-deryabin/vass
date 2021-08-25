@@ -6,19 +6,25 @@ export default {
 
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    titleTemplate: "%s - vass",
-    title: "vass",
+    titleTemplate:
+      "Создание сайтов, интернет-магазинов - Студия Станислава Васильева",
+    title: "Создание сайтов, интернет-магазинов - Студия Станислава Васильева",
     htmlAttrs: {
       lang: "en"
     },
     meta: [
       { charset: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { hid: "description", name: "description", content: "" },
+      {
+        hid: "description",
+        name: "description",
+        content:
+          "Закажите прибыльный сайт и интернет магазин. Стоимость от 400 тыс. тг. Занимаемся созданием сайтов с 2017 года. Студия Станислава Васильева."
+      },
       { name: "format-detection", content: "telephone=no" }
     ],
     link: [
-      { rel: "icon", type: "image/x-icon", href: "/favicon.ico" },
+      { rel: "icon", type: "image/x-icon", href: "/img/favicon.png" },
       { rel: "preconnect", href: "https://fonts.googleapis.com" },
       { rel: "preconnect", href: "https://fonts.gstatic.com" },
       {
@@ -49,7 +55,21 @@ export default {
   ],
 
   // Modules: https://go.nuxtjs.dev/config-modules
-  modules: [],
+  modules: ["@nuxtjs/axios"],
+
+  axios: {
+    proxy: true,
+    prefix: "/api/"
+  },
+
+  proxy: {
+    "/api": {
+      target: "http://localhost:5000",
+      pathRewrite: {
+        "^/api": ""
+      }
+    }
+  },
 
   // Vuetify module configuration: https://go.nuxtjs.dev/config-vuetify
   vuetify: {

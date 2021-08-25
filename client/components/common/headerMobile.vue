@@ -2,20 +2,22 @@
   <header class="header">
     <v-container class="d-flex justify-space-between align-center">
       <img src="@/static/img/logo.png" alt="logo" class="header__logo" />
-      <v-menu transition="slide-y-transition" bottom>
-        <template v-slot:activator="{ on, attrs }">
-          <v-btn text v-bind="attrs" v-on="on">
-            <Header />
-          </v-btn>
-        </template>
-        <v-list>
-          <v-list-item v-for="(item, i) in links" :key="i">
-            <v-list-item-title>
-              <a :href="item.link">{{ item.title }}</a></v-list-item-title
-            >
-          </v-list-item>
+
+      <div @click.stop="drawer = !drawer">
+        <Header />
+      </div>
+
+      <v-navigation-drawer v-model="drawer" right absolute temporary>
+        <v-list nav dense>
+          <v-list-item-group v-model="group">
+            <v-list-item v-for="(item, i) in links" :key="i">
+              <v-list-item-title>
+                <a :href="item.link">{{ item.title }}</a>
+              </v-list-item-title>
+            </v-list-item>
+          </v-list-item-group>
         </v-list>
-      </v-menu>
+      </v-navigation-drawer>
     </v-container>
   </header>
 </template>
@@ -39,7 +41,14 @@ export default {
         link: "#contacts",
       },
     ],
+    drawer: false,
+    group: null,
   }),
+  watch: {
+    group() {
+      this.drawer = false;
+    },
+  },
 };
 </script>
 

@@ -55,7 +55,7 @@ export default {
         title: "AsiaThaiSpa",
         text: "Первый в Казахстане SPA-бутик тайского и балийского массажа.",
         link: "https://asiathaispa.kz",
-        img: "/Group 264 2.png",
+        img: "/AsiaThaiSpa.png",
         class: "first",
         task: {
           title: "Задача",
@@ -78,7 +78,7 @@ export default {
         title: "Metalset",
         text: "Является стратегическим партнером ведущих металлургических заводов Казахстана и России.",
         link: "https://www.metalset.kz",
-        img: "/Group 264 2.png",
+        img: "/Metalset.png",
         class: "second",
         task: {
           title: "Задача",
@@ -100,8 +100,8 @@ export default {
         title: "Greenfax",
         text: "Творческая мастерская. Здесь вы можете заказать деревянные изделия и собирать их всей семьей.",
         link: "https://greenfax.kz",
-        img: "/Group 264 2.png",
-        class: "third text-black",
+        img: "/Greenfax.png",
+        class: "third text-black img-padding",
         task: {
           title: "Задача",
           text: "Создать интернет магазин с оплатой и доставкой",
@@ -125,7 +125,7 @@ export default {
         title: "Cауда-24",
         text: "Интернет-магазин с максимально низкими ценами. Девиз компании: сделать покупку товаров в интернет-магазине приятным и выгодным процессом для вас.",
         link: "https://www.sauda24.kz/",
-        img: "/Group 264 2.png",
+        img: "/Cауда-24.png",
         class: "fourth",
         task: {
           title: "Задача",
@@ -149,8 +149,8 @@ export default {
         title: "Sfera-Plast",
         text: "ТОО «Сфера пласт» – это качественное производство и продажа гофрированных труб по всему Казахстану",
         link: "https://sfera-plast.kz/",
-        img: "/Group 264 2.png",
-        class: "fifth text-black",
+        img: "/Sfera-Plast.png",
+        class: "fifth text-black img-padding",
         task: {
           title: "Задача",
           text: "Создать сайт под ключ и вывести его в топ!",
@@ -214,6 +214,10 @@ $colors: (
     @media (max-width: 960px) {
       flex-direction: column-reverse;
 
+      &.img-padding .section__image {
+        padding: 40px 0;
+      }
+
       &:not(.text-black) .section__title,
       &:not(.text-black) .section__title--second,
       &:not(.text-black) .section__text,
@@ -267,6 +271,9 @@ $colors: (
   }
   &__image {
     max-width: 100%;
+    @media (min-width: 960px) {
+      padding: 0 90px;
+    }
   }
   &__btn {
     font-size: 13px;

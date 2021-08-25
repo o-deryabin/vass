@@ -119,7 +119,7 @@ export default {
     margin: 30px 0 0;
     color: #fff;
     @media (min-width: 960px) {
-      padding: 30px 70px;
+      padding: 30px 99px;
       margin: 90px auto 0;
       display: block;
     }

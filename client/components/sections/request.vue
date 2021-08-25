@@ -36,9 +36,9 @@ export default {
 .section {
   &--request {
     background: #fff;
-
     padding: 40px 0;
     @media (min-width: 960px) {
+      padding: 120px 0;
       margin: 80px 0;
     }
   }

@@ -12,20 +12,20 @@
         <v-col md="6" cols="12">
           <v-form ref="form" lazy-validation @submit.prevent="send">
             <v-text-field
-              v-model="firstname"
+              v-model="form.firstname"
               :rules="nameRules"
               label="Имя"
               required
             ></v-text-field>
 
             <v-text-field
-              v-model="tel"
+              v-model="form.tel"
               label="Телефон"
               :rules="telRules"
               v-mask="'+7(###)###-##-##'"
               required
             ></v-text-field>
-            <button type="button" class="section__btn">Отправить</button>
+            <button type="submit" class="section__btn">Отправить</button>
           </v-form>
         </v-col>
       </v-row>
@@ -33,24 +33,44 @@
     <v-card-actions class="justify-end">
       <v-btn text @click="dialog.value = false">Закрыть</v-btn>
     </v-card-actions>
+    <Snackbar :message="message" :timeout="timeout" :snackbar="snackbar" />
   </v-card>
 </template>
 
 
 <script>
+import Snackbar from "./snackbar.vue";
 export default {
+  components: { Snackbar },
   props: ["dialog"],
   data: () => ({
     valid: false,
-    firstname: "",
     nameRules: [(v) => !!v || "Имя обязательно"],
-    tel: "",
     telRules: [(v) => !!v || "Телефон обязателен"],
+    snackbar: false,
+    message: "",
+    timeout: 2000,
+    form: {
+      firstname: "",
+      tel: "",
+    },
   }),
   methods: {
-    send() {
+    async send() {
       this.$refs.form.validate();
-      console.log(this.firstname, this.tel);
+
+      if (!this.form.firstname || !this.form.tel) {
+        this.message = "не все поля заполнены";
+        return (this.snackbar = true);
+      }
+
+      const response = await this.$axios.$post("/api/email/send", {
+        ...this.form,
+      });
+
+      this.message = response.message;
+
+      this.snackbar = true;
     },
   },
 };

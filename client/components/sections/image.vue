@@ -23,7 +23,6 @@ export default {};
     background-position: center;
     background-size: contain;
     @media (min-width: 600px) {
-      background-size: cover;
       background-attachment: fixed;
       height: 800px;
     }

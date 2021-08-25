@@ -10,31 +10,41 @@
           </p>
           <v-row>
             <v-col md="6" cols="12">
-              <a href="tel:+7(747)266-66-82" class="section__link"
-                >+7 (747) 266-66-82</a
-              >
-              <a href="mailto:hello@vass.kz" class="section__link"
-                >hello@vass.kz</a
-              >
-              <a
-                href="http://"
-                target="_blank"
-                rel="noopener noreferrer"
-                class="section__link"
-                >instagram</a
-              >
+              <ul>
+                <li>
+                  <a href="tel:+7(747)266-66-82" class="section__link"
+                    >+7 (747) 266-66-82</a
+                  >
+                </li>
+                <li class="my-md-12 my-5">
+                  <a
+                    href="mailto:hello@vass.kz"
+                    class="section__link section__link--center"
+                    >hello@vass.kz</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="https://www.instagram.com/vasskz/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="section__link"
+                    >instagram</a
+                  >
+                </li>
+              </ul>
             </v-col>
             <v-col md="6" cols="12">
               <v-form ref="form" lazy-validation @submit.prevent="send">
                 <v-text-field
-                  v-model="firstname"
+                  v-model="form.firstname"
                   :rules="nameRules"
                   label="Имя"
                   required
                 ></v-text-field>
 
                 <v-text-field
-                  v-model="tel"
+                  v-model="form.tel"
                   label="Телефон"
                   :rules="telRules"
                   v-mask="'+7(###)###-##-##'"
@@ -47,28 +57,53 @@
         </v-col>
       </v-row>
     </v-container>
+    <Snackbar :message="message" :timeout="timeout" :snackbar="snackbar" />
   </section>
 </template>
 
 <script>
+import Snackbar from "../common/snackbar.vue";
 export default {
+  components: { Snackbar },
   data: () => ({
     valid: false,
-    firstname: "",
     nameRules: [(v) => !!v || "Имя обязательно"],
-    tel: "",
     telRules: [(v) => !!v || "Телефон обязателен"],
+    snackbar: false,
+    message: "",
+    timeout: 2000,
+    form: {
+      firstname: "",
+      tel: "",
+    },
   }),
   methods: {
-    send() {
+    async send() {
       this.$refs.form.validate();
-      console.log(this.firstname, this.tel);
+
+      if (!this.form.firstname || !this.form.tel) {
+        this.message = "не все поля заполнены";
+        return (this.snackbar = true);
+      }
+
+      const response = await this.$axios.$post("/api/email/send", {
+        ...this.form,
+      });
+
+      this.message = response.message;
+
+      this.snackbar = true;
     },
   },
 };
 </script>
 
 <style lang="scss" scoped>
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
 .section {
   &__text,
   &__link {
@@ -92,15 +127,14 @@ export default {
     font-size: 18px;
     letter-spacing: 0.07em;
     color: #000000;
-    display: block;
     text-decoration: none;
     @media (min-width: 960px) {
       font-size: 29px;
-      &:nth-child(2) {
+      &--center {
         margin: 50px 0;
       }
     }
-    &:nth-child(2) {
+    &--center {
       margin: 20px 0;
     }
   }
@@ -110,7 +144,7 @@ export default {
     width: 100%;
     color: #fff;
     @media (min-width: 960px) {
-      padding: 30px 145px;
+      padding: 30px auto;
     }
   }
 }

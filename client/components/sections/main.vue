@@ -4,10 +4,14 @@
       <h1 class="c-title">
         <template v-if="width >= 980">
           Сайты<br />
-          интернет-магазины<br />
+          Интернет-магазины<br />
           Мобильные приложения
         </template>
-        <template v-else> Создание сайтов и магазинов </template>
+        <template v-else>
+          Сайты<br />
+          Магазины<br />
+          Мобильные приложения
+        </template>
       </h1>
       <h5 class="description">
         Вы получите прибыльный сайт всего за 10 дней от 400 000 тенге.
@@ -39,14 +43,14 @@ export default {
 .section {
   // margin-top: 100px;
   &__btn {
-    font-family: Inter;
-    text-transform: uppercase;
     color: #ffffff;
     margin-top: 35px;
-    background: $c-orange;
     font-size: 14px;
     line-height: 130%;
     padding: 25px 0;
+    &:hover {
+      background: #000;
+    }
     @media (min-width: 960px) {
       font-size: 18px;
       line-height: 130%;
