@@ -18,6 +18,9 @@
           <p class="section__title section__title--18-grey">
             {{ item.title }}
           </p>
+          <template v-if="width <= 980">
+            <v-divider></v-divider>
+          </template>
         </v-col>
       </v-row>
     </v-container>
@@ -26,6 +29,7 @@
 
 <script>
 export default {
+  props: ["width"],
   data: () => ({
     benefits: [
       {
@@ -49,8 +53,8 @@ export default {
 .section {
   &__content {
     margin-top: 25px;
-    border-bottom: 1px solid #aeaeae;
     @media (min-width: 960px) {
+      border-bottom: 1px solid #aeaeae;
       margin-top: 55px;
       padding-bottom: 25px;
     }
@@ -65,6 +69,11 @@ export default {
     font-size: 25px;
     @media (min-width: 960px) {
       font-size: 55px;
+    }
+  }
+  &__title {
+    @media (max-width: 960px) {
+      margin-bottom: 45px;
     }
   }
 }

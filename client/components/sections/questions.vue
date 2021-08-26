@@ -68,7 +68,10 @@ export default {
 
 .section {
   &__content {
-    margin-top: 65px;
+    margin-top: 45px;
+    @media (min-width: 960px) {
+      margin-top: 65px;
+    }
   }
 
   &__title {

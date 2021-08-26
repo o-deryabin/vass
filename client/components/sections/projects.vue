@@ -4,13 +4,15 @@
       <h2 class="sub-title animate__animated animate__fadeInUp">
         Проекты студии
       </h2>
-      <v-divider class="section__divider"></v-divider>
+      <template v-if="width <= 980">
+        <v-divider class="section__divider"></v-divider>
+      </template>
 
       <v-row
         v-for="(item, index) in projects"
         :key="index"
         class="section__content"
-        :class="[item.class, { 'mt-md-16': index === 0 }]"
+        :class="[item.class, { 'mt-md-16 mt-9': index === 0 }]"
       >
         <v-col md="4" class="d-flex flex-column justify-center section__left">
           <h4 class="section__title">{{ item.title }}</h4>
@@ -216,7 +218,7 @@ $colors: (
 .section {
   &__separator {
     margin-top: 18px;
-    margin-bottom: 20px;
+    margin-bottom: 40px;
     @media (min-width: 960px) {
       margin-top: 30px;
       margin-bottom: 50px;
@@ -306,6 +308,7 @@ $colors: (
     transition: 0.3s;
     background: transparent;
     text-transform: uppercase;
+    margin-bottom: 20px;
     &:hover {
       color: #fff;
       background: #000000;

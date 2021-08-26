@@ -6,11 +6,11 @@
     <template v-if="width >= 980"><Team /></template>
     <template v-else><TeamMobile /></template>
 
-    <Price />
-    <Projects />
+    <Price :width="width" />
+    <Projects :width="width" />
     <Companies />
     <Request />
-    <Benefits />
+    <Benefits :width="width" />
     <Questions />
     <Contacts />
   </v-main>

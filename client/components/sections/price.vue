@@ -36,6 +36,9 @@
           <p class="section__description section__description--18">
             {{ item.description }}
           </p>
+          <template v-if="width <= 980">
+            <v-divider></v-divider>
+          </template>
         </v-col>
       </v-row>
 
@@ -56,6 +59,7 @@
 <script>
 import Modal from "../common/modal.vue";
 export default {
+  props: ["width"],
   components: { Modal },
   data: () => ({
     data: [
@@ -88,10 +92,10 @@ export default {
 <style lang="scss" scoped>
 .section {
   &__content {
-    margin-top: 45px;
-    border-bottom: 1px solid #aeaeae;
+    margin-top: 35px;
 
     @media (min-width: 960px) {
+      border-bottom: 1px solid #aeaeae;
       margin-top: 55px;
     }
   }
@@ -111,7 +115,7 @@ export default {
   }
   &__description {
     margin-top: 20px;
-    margin-bottom: 25px;
+    margin-bottom: 45px;
     @media (min-width: 960px) {
       margin-top: 35px;
       margin-bottom: 40px;

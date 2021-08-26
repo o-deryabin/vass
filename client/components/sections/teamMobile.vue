@@ -23,18 +23,24 @@
           <p class="section__description section__description--16 mt-4">
             лет опыта в веб разработке
           </p>
-          <img
-            src="/img/team/image 17_2.webp"
-            alt="AmoCrm партнер"
-            class="section__img--partners mt-1"
-          />
         </v-col>
         <v-col cols="6">
           <img src="/img/team/Ellipse 5.webp" alt="" class="section__img" />
+        </v-col>
+      </v-row>
+      <v-row>
+        <v-col cols="6">
+          <img
+            src="/img/team/image 17_2.webp"
+            alt="AmoCrm партнер"
+            class="section__img--partners"
+          />
+        </v-col>
+        <v-col cols="6">
           <img
             src="/img/team/image 18_2.webp"
             alt="Google партнер"
-            class="section__img--partners mt-5"
+            class="section__img--partners"
           />
         </v-col>
       </v-row>
