@@ -30,13 +30,13 @@ export default {
       {
         rel: "stylesheet",
         href:
-          "https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap"
+          "https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;&display=swap"
       }
     ]
   },
 
   // Global CSS: https://go.nuxtjs.dev/config-css
-  css: ["@/assets/main.scss", "animate.css"],
+  css: ["@/assets/main.scss"],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: ["~/global.js"],
@@ -51,7 +51,7 @@ export default {
   ],
 
   // Modules: https://go.nuxtjs.dev/config-modules
-  modules: ["@nuxtjs/axios", "@nuxt/image"],
+  modules: ["@nuxtjs/axios"],
 
   axios: {
     proxy: true,
