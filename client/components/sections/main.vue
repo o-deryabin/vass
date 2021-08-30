@@ -1,18 +1,27 @@
 <template>
   <section class="section section--main">
     <v-container>
-      <h1 class="c-title animate__animated animate__fadeInUp">
-        <template v-if="width >= 980">
-          Сайты<br />
-          Интернет-магазины<br />
-          Мобильные приложения
-        </template>
-        <template v-else>
-          Сайты<br />
-          Магазины<br />
-          Мобильные приложения
-        </template>
-      </h1>
+      <v-lazy
+        v-model="isActive"
+        :options="{
+          threshold: 0.5,
+        }"
+        min-height="200"
+        transition="scroll-y-reverse-transition"
+      >
+        <h1 class="c-title">
+          <template v-if="width >= 980">
+            Сайты<br />
+            Интернет-магазины<br />
+            Мобильные приложения
+          </template>
+          <template v-else>
+            Сайты<br />
+            Магазины<br />
+            Мобильные приложения
+          </template>
+        </h1>
+      </v-lazy>
       <v-row>
         <v-col md="8" class="ml-auto">
           <h5 class="description">
@@ -40,6 +49,9 @@ import Modal from "../common/modal.vue";
 export default {
   components: { Modal },
   props: ["width"],
+  data: () => ({
+    isActive: false,
+  }),
 };
 </script>
 

@@ -1,9 +1,16 @@
 <template>
   <section class="section section--price" id="price">
     <v-container>
-      <h2 class="sub-title animate__animated animate__fadeInUp">
-        Цены и сроки
-      </h2>
+      <v-lazy
+        v-model="isActive"
+        :options="{
+          threshold: 0.5,
+        }"
+        min-height="200"
+        transition="scroll-y-reverse-transition"
+      >
+        <h2 class="sub-title">Цены и сроки</h2>
+      </v-lazy>
       <v-divider class="section__divider"></v-divider>
 
       <v-row
@@ -62,6 +69,7 @@ export default {
   props: ["width"],
   components: { Modal },
   data: () => ({
+    isActive: false,
     data: [
       {
         title: "Сайт",

@@ -1,9 +1,16 @@
 <template>
   <section class="section section--teamMobile">
     <v-container>
-      <h2 class="sub-title wow animate__fadeInUp" data-wow-duration="1.5s">
-        Время – деньги!
-      </h2>
+      <v-lazy
+        v-model="isActive"
+        :options="{
+          threshold: 0.5,
+        }"
+        min-height="200"
+        transition="scroll-y-reverse-transition"
+      >
+        <h2 class="sub-title">Время – деньги!</h2>
+      </v-lazy>
       <p class="section__description section__description--18 mt-4 mb-6">
         Обратившись в нашу компанию, Вам не придется его тратить. Вам не нужно
         дополнительно искать специалистов по рекламе и продвижению. Всю работу
@@ -49,7 +56,11 @@
 </template>
 
 <script>
-export default {};
+export default {
+  data: () => ({
+    isActive: false,
+  }),
+};
 </script>
 
 <style lang="scss" scoped>

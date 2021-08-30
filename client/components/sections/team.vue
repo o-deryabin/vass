@@ -1,10 +1,16 @@
 <template>
   <section class="section section--team">
     <v-container>
-      <h2 class="sub-title animate__animated animate__fadeInUp">
-        Время – деньги!
-      </h2>
-
+      <v-lazy
+        v-model="isActive"
+        :options="{
+          threshold: 0.5,
+        }"
+        min-height="200"
+        transition="scroll-y-reverse-transition"
+      >
+        <h2 class="sub-title">Время – деньги!</h2>
+      </v-lazy>
       <v-row>
         <v-col md="8" class="ml-auto">
           <v-row class="section__content">
@@ -54,7 +60,11 @@
 </template>
 
 <script>
-export default {};
+export default {
+  data: () => ({
+    isActive: false,
+  }),
+};
 </script>
 
 <style lang="scss" scoped>

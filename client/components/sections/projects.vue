@@ -1,9 +1,16 @@
 <template>
   <section class="section section--projects" id="projects">
     <v-container>
-      <h2 class="sub-title animate__animated animate__fadeInUp">
-        Проекты студии
-      </h2>
+      <v-lazy
+        v-model="isActive"
+        :options="{
+          threshold: 0.5,
+        }"
+        min-height="200"
+        transition="scroll-y-reverse-transition"
+      >
+        <h2 class="sub-title">Проекты студии</h2>
+      </v-lazy>
       <template v-if="width <= 980">
         <v-divider class="section__divider"></v-divider>
       </template>
@@ -54,6 +61,7 @@ import ProjectsSvg from "../svg/projects.vue";
 export default {
   components: { ProjectsSvg },
   data: () => ({
+    isActive: false,
     projects: [
       {
         title: "AsiaThaiSpa",

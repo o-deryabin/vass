@@ -1,9 +1,16 @@
 <template>
   <section class="section section--benefits">
     <v-container>
-      <h2 class="sub-title animate__animated animate__fadeInUp">
-        Преимущества
-      </h2>
+      <v-lazy
+        v-model="isActive"
+        :options="{
+          threshold: 0.5,
+        }"
+        min-height="200"
+        transition="scroll-y-reverse-transition"
+      >
+        <h2 class="sub-title">Преимущества</h2>
+      </v-lazy>
       <v-divider class="section__divider"></v-divider>
 
       <v-row
@@ -31,6 +38,7 @@
 export default {
   props: ["width"],
   data: () => ({
+    isActive: false,
     benefits: [
       {
         title:

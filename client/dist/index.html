@@ -32,24 +32,12 @@
     <link
       data-n-head="1"
       rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap"
     />
-    <link
-      data-n-head="1"
-      rel="stylesheet"
-      type="text/css"
-      href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900&display=swap"
-    />
-    <link
-      data-n-head="1"
-      rel="stylesheet"
-      type="text/css"
-      href="https://cdn.jsdelivr.net/npm/@mdi/font@latest/css/materialdesignicons.min.css"
-    />
-    <link rel="preload" href="/_nuxt/447f62f.js" as="script" />
-    <link rel="preload" href="/_nuxt/b6e3d00.js" as="script" />
-    <link rel="preload" href="/_nuxt/7daf084.js" as="script" />
-    <link rel="preload" href="/_nuxt/c1958a7.js" as="script" />
+    <link rel="preload" href="/_nuxt/21f40c1.js" as="script" />
+    <link rel="preload" href="/_nuxt/073c030.js" as="script" />
+    <link rel="preload" href="/_nuxt/788491c.js" as="script" />
+    <link rel="preload" href="/_nuxt/db2b675.js" as="script" />
   </head>
   <body>
     <div id="__nuxt">
@@ -158,38 +146,40 @@
         config: { _app: { basePath: "/", assetsPath: "/_nuxt/", cdnURL: null } }
       };
     </script>
-    <script src="/_nuxt/447f62f.js"></script>
-    <script src="/_nuxt/b6e3d00.js"></script>
-    <script src="/_nuxt/7daf084.js"></script>
-    <script src="/_nuxt/c1958a7.js"></script>
-    <!-- Facebook Pixel Code -->
+    <script src="/_nuxt/21f40c1.js"></script>
+    <script src="/_nuxt/073c030.js"></script>
+    <script src="/_nuxt/788491c.js"></script>
+    <script src="/_nuxt/db2b675.js"></script>
+
     <script defer>
       window.onload = function() {
-        !(function(f, b, e, v, n, t, s) {
-          if (f.fbq) return;
-          n = f.fbq = function() {
-            n.callMethod
-              ? n.callMethod.apply(n, arguments)
-              : n.queue.push(arguments);
-          };
-          if (!f._fbq) f._fbq = n;
-          n.push = n;
-          n.loaded = !0;
-          n.version = "2.0";
-          n.queue = [];
-          t = b.createElement(e);
-          t.async = !0;
-          t.src = v;
-          s = b.getElementsByTagName(e)[0];
-          s.parentNode.insertBefore(t, s);
-        })(
-          window,
-          document,
-          "script",
-          "https://connect.facebook.net/en_US/fbevents.js"
-        );
-        fbq("init", "206856549957627");
-        fbq("track", "PageView");
+        setTimeout(() => {
+          !(function(f, b, e, v, n, t, s) {
+            if (f.fbq) return;
+            n = f.fbq = function() {
+              n.callMethod
+                ? n.callMethod.apply(n, arguments)
+                : n.queue.push(arguments);
+            };
+            if (!f._fbq) f._fbq = n;
+            n.push = n;
+            n.loaded = !0;
+            n.version = "2.0";
+            n.queue = [];
+            t = b.createElement(e);
+            t.async = !0;
+            t.src = v;
+            s = b.getElementsByTagName(e)[0];
+            s.parentNode.insertBefore(t, s);
+          })(
+            window,
+            document,
+            "script",
+            "https://connect.facebook.net/en_US/fbevents.js"
+          );
+          fbq("init", "206856549957627");
+          fbq("track", "PageView");
+        }, 500);
       };
     </script>
     <noscript
@@ -203,33 +193,35 @@
     <!-- Yandex.Metrika counter -->
     <script type="text/javascript" defer>
       window.onload = function() {
-        (function(m, e, t, r, i, k, a) {
-          m[i] =
-            m[i] ||
-            function() {
-              (m[i].a = m[i].a || []).push(arguments);
-            };
-          m[i].l = 1 * new Date();
-          (k = e.createElement(t)),
-            (a = e.getElementsByTagName(t)[0]),
-            (k.async = 1),
-            (k.src = r),
-            a.parentNode.insertBefore(k, a);
-        })(
-          window,
-          document,
-          "script",
-          "https://mc.yandex.ru/metrika/tag.js",
-          "ym"
-        );
+        setTimeout(() => {
+          (function(m, e, t, r, i, k, a) {
+            m[i] =
+              m[i] ||
+              function() {
+                (m[i].a = m[i].a || []).push(arguments);
+              };
+            m[i].l = 1 * new Date();
+            (k = e.createElement(t)),
+              (a = e.getElementsByTagName(t)[0]),
+              (k.async = 1),
+              (k.src = r),
+              a.parentNode.insertBefore(k, a);
+          })(
+            window,
+            document,
+            "script",
+            "https://mc.yandex.ru/metrika/tag.js",
+            "ym"
+          );
 
-        ym(57713533, "init", {
-          clickmap: true,
-          trackLinks: true,
-          accurateTrackBounce: true,
-          webvisor: true,
-          ecommerce: "dataLayer"
-        });
+          ym(57713533, "init", {
+            clickmap: true,
+            trackLinks: true,
+            accurateTrackBounce: true,
+            webvisor: true,
+            ecommerce: "dataLayer"
+          });
+        }, 500);
       };
     </script>
     <noscript

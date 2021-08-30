@@ -1,10 +1,16 @@
 <template>
   <section class="section section--projects">
     <v-container>
-      <h2 class="sub-title animate__animated animate__fadeInUp">
-        Создавали проекты для компаний
-      </h2>
-
+      <v-lazy
+        v-model="isActive"
+        :options="{
+          threshold: 0.5,
+        }"
+        min-height="200"
+        transition="scroll-y-reverse-transition"
+      >
+        <h2 class="sub-title">Создавали проекты для компаний</h2>
+      </v-lazy>
       <v-row class="section__content">
         <v-col md="8" class="ml-auto">
           <v-row>
@@ -52,6 +58,7 @@
 <script>
 export default {
   data: () => ({
+    isActive: false,
     firstCompanies: [
       {
         title: "OLX",

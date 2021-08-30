@@ -1,10 +1,16 @@
 <template>
   <section class="section section--quality">
     <v-container>
-      <h2 class="sub-title animate__animated animate__fadeInUp">
-        ВЫСОКОЕ КАЧЕСТВО САЙТОВ
-      </h2>
-
+      <v-lazy
+        v-model="isActive"
+        :options="{
+          threshold: 0.5,
+        }"
+        min-height="200"
+        transition="scroll-y-reverse-transition"
+      >
+        <h2 class="sub-title">ВЫСОКОЕ КАЧЕСТВО САЙТОВ</h2>
+      </v-lazy>
       <v-row
         v-for="(item, index) in data"
         :key="index"
@@ -32,6 +38,7 @@
 <script>
 export default {
   data: () => ({
+    isActive: false,
     data: [
       {
         title: "Копирайтинг",

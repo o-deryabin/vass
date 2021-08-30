@@ -1,7 +1,16 @@
 <template>
   <section class="section section--contacts" id="contacts">
     <v-container>
-      <h2 class="sub-title animate__animated animate__fadeInUp">Контакты</h2>
+      <v-lazy
+        v-model="isActive"
+        :options="{
+          threshold: 0.5,
+        }"
+        min-height="200"
+        transition="scroll-y-reverse-transition"
+      >
+        <h2 class="sub-title">Контакты</h2>
+      </v-lazy>
       <v-row class="section__content">
         <v-col md="8" class="ml-auto">
           <p class="section__text">
@@ -66,6 +75,7 @@ import Snackbar from "../common/snackbar.vue";
 export default {
   components: { Snackbar },
   data: () => ({
+    isActive: false,
     valid: false,
     nameRules: [(v) => !!v || "Имя обязательно"],
     telRules: [(v) => !!v || "Телефон обязателен"],

@@ -1,10 +1,16 @@
 <template>
   <section class="section section--questions">
     <v-container>
-      <h2 class="sub-title animate__animated animate__fadeInUp">
-        Частые вопросы
-      </h2>
-
+      <v-lazy
+        v-model="isActive"
+        :options="{
+          threshold: 0.5,
+        }"
+        min-height="200"
+        transition="scroll-y-reverse-transition"
+      >
+        <h2 class="sub-title">Частые вопросы</h2>
+      </v-lazy>
       <v-row class="">
         <v-col md="8" class="ml-auto section__content">
           <v-expansion-panels>
@@ -30,6 +36,7 @@
 <script>
 export default {
   data: () => ({
+    isActive: false,
     questions: [
       {
         title: "Используете ли Вы конструкторы сайтов при разработке ?",
