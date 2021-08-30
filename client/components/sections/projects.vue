@@ -6,7 +6,6 @@
         :options="{
           threshold: 0.5,
         }"
-        min-height="200"
         transition="scroll-y-reverse-transition"
       >
         <h2 class="sub-title">Проекты студии</h2>
@@ -59,6 +58,7 @@
 <script>
 import ProjectsSvg from "../svg/projects.vue";
 export default {
+  props: ["width"],
   components: { ProjectsSvg },
   data: () => ({
     isActive: false,

@@ -6,7 +6,6 @@
         :options="{
           threshold: 0.5,
         }"
-        min-height="200"
         transition="scroll-y-reverse-transition"
       >
         <h2 class="sub-title">ВЫСОКОЕ КАЧЕСТВО САЙТОВ</h2>

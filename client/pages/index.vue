@@ -50,7 +50,6 @@ export default {
   methods: {
     updateWidth() {
       this.width = window.innerWidth;
-      console.log(this.width);
     },
   },
   created() {
