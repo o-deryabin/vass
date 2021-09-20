@@ -13,6 +13,7 @@
     <Benefits :width="width" />
     <Questions />
     <Contacts />
+    <!-- <WhatsAppBtn /> -->
   </v-main>
 </template>
 
@@ -29,6 +30,7 @@ import Contacts from "../components/sections/contacts.vue";
 import cImage from "../components/sections/image.vue";
 import TeamMobile from "../components/sections/teamMobile.vue";
 import Benefits from "../components/sections/benefits.vue";
+// import WhatsAppBtn from "../components/common/whatsAppBtn.vue";
 export default {
   components: {
     Main,
@@ -43,6 +45,7 @@ export default {
     cImage,
     TeamMobile,
     Benefits,
+    // WhatsAppBtn,
   },
   data: () => ({
     width: 0,

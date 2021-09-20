@@ -43,7 +43,8 @@
               v-model="form.tel"
               label="Телефон"
               :rules="telRules"
-              v-mask="'+7(###)###-##-##'"
+              v-mask="'X#(###)###-##-##'"
+              placeholder="+7(___)___-__-__"
               required
             ></v-text-field>
             <button type="submit" class="section__btn">Отправить</button>
