@@ -96,7 +96,7 @@ export default {
         return (this.snackbar = true);
       }
 
-      const response = await this.$axios.$post("/email/send", {
+      const response = await this.$axios.$post("/user/send", {
         ...this.form,
       });
 
