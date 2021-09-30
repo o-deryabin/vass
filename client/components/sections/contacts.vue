@@ -83,6 +83,7 @@ export default {
     message: "",
     timeout: 2000,
     form: {
+      site: "promo.vass",
       firstname: "",
       tel: "",
     },

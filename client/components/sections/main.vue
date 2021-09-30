@@ -24,7 +24,7 @@
       <v-row>
         <v-col md="8" class="ml-auto">
           <h5 class="description">
-            Вы получите прибыльный сайт всего за 10 дней от 400 000 тенге.
+            Вы получите прибыльный сайт всего за 5 дней от 50 000 тенге.
 
             <v-dialog transition="dialog-top-transition" max-width="900">
               <template v-slot:activator="{ on, attrs }">

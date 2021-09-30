@@ -10,6 +10,7 @@ const transporter = nodemailer.createTransport(
       refreshToken: process.env.EMAIL_REFRECH_TOKEN,
       clientId: process.env.EMAIL_CLIENT_ID,
       clientSecret: process.env.EMAIL_CLIENT_SECRET,
+      accessToken: process.env.EMAIL_ACCESS_TOKEN,
     },
   },
   {
